@@ -1,0 +1,191 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/KeyboardNode.gd" type="Script" id=1]
+[ext_resource path="res://scenes/KeyNode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://img/back button.png" type="Texture" id=3]
+
+[node name="KeyboardNode" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = 37.0
+margin_right = 987.0
+margin_bottom = 300.0
+color = Color( 0.0745098, 0.843137, 0.341176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Backspace" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 847.647, 25 )
+back_color = Color( 1, 1, 1, 1 )
+icon = ExtResource( 3 )
+
+[node name="LeftArrow" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 788.588, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "<"
+
+[node name="RightArrow" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 860.118, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = ">"
+
+[node name="LetterQ" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 80, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "q"
+
+[node name="LetterW" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 155, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "w"
+
+[node name="LetterE" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 230, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "e"
+
+[node name="LetterR" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 305, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "r"
+
+[node name="LetterT" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 380, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "t"
+
+[node name="LetterY" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 455, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "y"
+
+[node name="LetterU" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 530, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "u"
+
+[node name="LetterI" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 605, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "i"
+
+[node name="LetterO" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 680, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "o"
+
+[node name="LetterP" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 755, 25 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "p"
+
+[node name="LetterA" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 99, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "a"
+
+[node name="LetterS" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 174, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "s"
+
+[node name="LetterD" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 249, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "d"
+
+[node name="LetterF" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 324, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "f"
+
+[node name="LetterG" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 399, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "g"
+
+[node name="LetterH" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 474, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "h"
+
+[node name="LetterJ" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 549, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "j"
+
+[node name="LetterK" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 624, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "k"
+
+[node name="LetterL" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 699, 105 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "l"
+
+[node name="LetterZ" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 136, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "z"
+
+[node name="LetterX" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 211, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "x"
+
+[node name="LetterC" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 286, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "c"
+
+[node name="LetterV" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 361, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "v"
+
+[node name="LetterB" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 436, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "b"
+
+[node name="LetterN" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 511, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "n"
+
+[node name="LetterM" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( 586, 185 )
+back_color = Color( 1, 1, 1, 1 )
+letter = "m"
+[connection signal="key_tapped" from="Background/Backspace" to="." method="_on_Backspace_key_tapped"]
+[connection signal="key_tapped" from="Background/LeftArrow" to="." method="_on_LeftArrow_key_tapped"]
+[connection signal="key_tapped" from="Background/RightArrow" to="." method="_on_RightArrow_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterQ" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterW" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterE" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterR" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterT" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterY" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterU" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterI" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterO" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterP" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterA" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterS" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterD" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterF" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterG" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterH" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterJ" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterK" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterL" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterZ" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterX" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterC" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterV" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterB" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterN" to="." method="_on_Letter_key_tapped"]
+[connection signal="key_tapped" from="Background/LetterM" to="." method="_on_Letter_key_tapped"]

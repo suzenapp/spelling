@@ -1,0 +1,135 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://fonts/font-mid.tres" type="DynamicFont" id=1]
+[ext_resource path="res://styles/blue.tres" type="StyleBox" id=2]
+[ext_resource path="res://fonts/font-large.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/WordListPage.gd" type="Script" id=4]
+[ext_resource path="res://scenes/KeyboardNode.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scenes/WordNode.tscn" type="PackedScene" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 10.0
+bg_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.737255, 0.737255, 0.737255, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 6 )
+
+[node name="WordListPage" type="Node2D"]
+script = ExtResource( 4 )
+Word = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 75.0
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Word List"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 786.0
+margin_right = 1024.0
+margin_bottom = 75.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "back"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WordPad" type="Node2D" parent="."]
+
+[node name="KeyboardNode" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 700 )
+back_color = Color( 0.803922, 0.803922, 0.803922, 1 )
+
+[node name="KeyboardTween" type="Tween" parent="."]
+
+[node name="TypePad" type="Node2D" parent="."]
+position = Vector2( 1100, 0 )
+
+[node name="ColorRect" type="ColorRect" parent="TypePad"]
+margin_left = 71.9105
+margin_top = 0.19029
+margin_right = 967.911
+margin_bottom = 250.19
+color = Color( 0.737255, 0.737255, 0.737255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TypePad"]
+margin_left = 120.0
+margin_top = 75.0
+margin_right = 784.0
+margin_bottom = 159.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TypePadDoneButton" type="Button" parent="TypePad"]
+margin_left = 800.226
+margin_top = 84.1105
+margin_right = 927.226
+margin_bottom = 149.111
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Done"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="TypePad"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="key_backspace" from="KeyboardNode" to="." method="_on_KeyboardNode_key_backspace"]
+[connection signal="key_left" from="KeyboardNode" to="." method="_on_KeyboardNode_key_left"]
+[connection signal="key_right" from="KeyboardNode" to="." method="_on_KeyboardNode_key_right"]
+[connection signal="key_tapped" from="KeyboardNode" to="." method="_on_KeyboardNode_key_tapped"]
+[connection signal="pressed" from="TypePad/TypePadDoneButton" to="." method="_on_TypePadDoneButton_pressed"]

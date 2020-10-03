@@ -1,0 +1,356 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://scenes/PracticePage.gd" type="Script" id=1]
+[ext_resource path="res://styles/green.tres" type="StyleBox" id=2]
+[ext_resource path="res://fonts/font-mid.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/font-large.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scenes/KeyboardNode.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 10.0
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=2]
+size = 65
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+content_margin_left = 10.0
+content_margin_top = 3.0
+
+[sub_resource type="DynamicFont" id=4]
+size = 65
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 10.0
+
+[sub_resource type="DynamicFont" id=6]
+size = 65
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 75
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.152941, 0.376471, 0.0705882, 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.152941, 0.376471, 0.0705882, 1 )
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.368627, 0.396078, 0.356863, 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 33
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0, 0.411765, 0.121569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0.411765, 0.121569, 1 )
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="DynamicFont" id=15]
+size = 33
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.588235, 0.109804, 0.603922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.588235, 0.109804, 0.603922, 1 )
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="DynamicFont" id=16]
+size = 33
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.372549, 0.4, 0.137255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.372549, 0.4, 0.137255, 1 )
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="DynamicFont" id=17]
+size = 33
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.231373, 0.231373, 0.619608, 1 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.231373, 0.231373, 0.619608, 1 )
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="DynamicFont" id=18]
+size = 33
+font_data = ExtResource( 6 )
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0.0945122, 0.246951, 0.463415, 0.719512, 0.89939 )
+colors = PoolColorArray( 1, 0, 0.84375, 0.860421, 1, 0.0470588, 0, 0.635294, 0, 0.0625, 1, 0.581404, 0.129412, 0.85098, 0.25098, 0.517647, 0.92549, 1, 0, 0.486275 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
+
+[sub_resource type="ParticlesMaterial" id=11]
+lifetime_randomness = 0.22
+emission_shape = 2
+emission_box_extents = Vector3( 440, 50, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 250, 0 )
+initial_velocity = 222.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 26.78
+scale = 5.0
+scale_random = 0.26
+color_ramp = SubResource( 10 )
+anim_speed = 5.6
+
+[node name="PracticePage" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 72.0
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 1.0
+margin_right = 182.0
+margin_bottom = 72.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyboardNode" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 300 )
+
+[node name="InputBox" type="Label" parent="."]
+margin_left = 37.0
+margin_top = 182.0
+margin_right = 987.0
+margin_bottom = 285.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HintBox" type="Label" parent="."]
+margin_left = 37.0
+margin_top = 182.0
+margin_right = 987.0
+margin_bottom = 285.0
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.513726, 0.513726, 0.513726, 1 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PeekBox" type="Button" parent="."]
+margin_left = 40.0
+margin_top = 85.0
+margin_right = 465.0
+margin_bottom = 165.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+clip_text = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="Hud" type="Label" parent="."]
+margin_left = 331.0
+margin_top = -1.0
+margin_right = 693.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1/1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PeekButton" type="Button" parent="."]
+margin_left = 477.0
+margin_top = 85.0
+margin_right = 557.0
+margin_bottom = 165.0
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/disabled = SubResource( 19 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 14 )
+text = "peek"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 870.0
+margin_top = 85.0
+margin_right = 990.0
+margin_bottom = 165.0
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 21 )
+custom_styles/focus = SubResource( 20 )
+custom_styles/disabled = SubResource( 20 )
+custom_styles/normal = SubResource( 20 )
+custom_fonts/font = SubResource( 15 )
+text = "next >"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShowButton" type="Button" parent="."]
+margin_left = 566.0
+margin_top = 84.0
+margin_right = 646.0
+margin_bottom = 164.0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/focus = SubResource( 22 )
+custom_styles/disabled = SubResource( 22 )
+custom_styles/normal = SubResource( 22 )
+custom_fonts/font = SubResource( 16 )
+text = "show"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PrevButton" type="Button" parent="."]
+margin_left = 778.0
+margin_top = 85.0
+margin_right = 858.0
+margin_bottom = 165.0
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/disabled = SubResource( 24 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 17 )
+text = "< back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GuideButton" type="Button" parent="."]
+margin_left = 663.0
+margin_top = 85.0
+margin_right = 763.0
+margin_bottom = 165.0
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 26 )
+custom_styles/normal = SubResource( 26 )
+custom_fonts/font = SubResource( 18 )
+text = "guide"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spaks" type="Node2D" parent="."]
+position = Vector2( 512, 230 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Particles2D" type="Particles2D" parent="Spaks"]
+material = SubResource( 8 )
+emitting = false
+amount = 750
+process_material = SubResource( 11 )
+
+[node name="SpaksTimer" type="Timer" parent="Spaks"]
+wait_time = 0.4
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="key_backspace" from="KeyboardNode" to="." method="_on_KeyboardNode_key_backspace"]
+[connection signal="key_left" from="KeyboardNode" to="." method="_on_KeyboardNode_key_left"]
+[connection signal="key_right" from="KeyboardNode" to="." method="_on_KeyboardNode_key_right"]
+[connection signal="key_tapped" from="KeyboardNode" to="." method="_on_KeyboardNode_key_tapped"]
+[connection signal="pressed" from="PeekBox" to="." method="_on_PeekBox_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="PeekButton" to="." method="_on_PeekButton_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="ShowButton" to="." method="_on_ShowButton_pressed"]
+[connection signal="pressed" from="PrevButton" to="." method="_on_PrevButton_pressed"]
+[connection signal="pressed" from="GuideButton" to="." method="_on_GuideButton_pressed"]
+[connection signal="timeout" from="Spaks/SpaksTimer" to="." method="_on_SpaksTimer_timeout"]

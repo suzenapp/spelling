@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://styles/blue.tres" type="StyleBox" id=1]
+[ext_resource path="res://styles/blue-pressed.tres" type="StyleBox" id=2]
+[ext_resource path="res://scenes/Main.gd" type="Script" id=3]
+[ext_resource path="res://fonts/font-large.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/font-huge.tres" type="DynamicFont" id=5]
+[ext_resource path="res://scenes/WordListPage.tscn" type="PackedScene" id=6]
+[ext_resource path="res://styles/green-pressed.tres" type="StyleBox" id=7]
+[ext_resource path="res://styles/green.tres" type="StyleBox" id=8]
+[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://scenes/PracticePage.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 9 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -0.439148
+margin_right = 1023.56
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainPage" type="Node2D" parent="."]
+
+[node name="Title" type="Label" parent="MainPage"]
+margin_left = 317.59
+margin_top = 65.1893
+margin_right = 712.59
+margin_bottom = 215.189
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Spelling"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubTitle" type="Label" parent="MainPage"]
+margin_left = 409.328
+margin_top = 193.46
+margin_right = 637.328
+margin_bottom = 263.46
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Homework"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WordListButton" type="Button" parent="MainPage"]
+margin_left = 199.0
+margin_top = 321.0
+margin_right = 497.0
+margin_bottom = 457.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Word List"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="MainPage"]
+margin_left = 552.0
+margin_top = 321.0
+margin_right = 849.0
+margin_bottom = 457.0
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 8 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 8 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Practice"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Results" type="Label" parent="MainPage"]
+margin_left = 555.0
+margin_top = 467.0
+margin_right = 842.0
+margin_bottom = 528.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "4/4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WordListPage" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0, 1046.05 )
+
+[node name="PageTween" type="Tween" parent="."]
+
+[node name="PracticePage" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1127.69, 0 )
+[connection signal="pressed" from="MainPage/WordListButton" to="." method="_on_WordListButton_pressed"]
+[connection signal="pressed" from="MainPage/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="back_button_pressed" from="WordListPage" to="." method="_on_WordListPage_back_button_pressed"]
+[connection signal="back_button_pressed" from="PracticePage" to="." method="_on_PracticePage_back_button_pressed"]

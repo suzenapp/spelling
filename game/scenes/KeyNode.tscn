@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/KeyNode.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 57
+extra_spacing_top = -27
+extra_spacing_bottom = -20
+font_data = ExtResource( 1 )
+
+[node name="KeyNode" type="Node2D"]
+script = ExtResource( 2 )
+back_color = Color( 0, 0, 0, 1 )
+letter = ""
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 65.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 33, 33 )
+color = Color( 0.478431, 0.505882, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Letter" type="Button" parent="Background"]
+margin_right = 65.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 33, 33 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "f"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="button_down" from="Background/Letter" to="." method="_on_Letter_button_down"]
+[connection signal="button_up" from="Background/Letter" to="." method="_on_Letter_button_up"]
+[connection signal="pressed" from="Background/Letter" to="." method="_on_Letter_pressed"]

@@ -1,0 +1,119 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/WordNode.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+size = 35
+extra_spacing_top = -50
+extra_spacing_bottom = -50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+extra_spacing_top = -50
+extra_spacing_bottom = -50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="DynamicFont" id=18]
+size = 80
+extra_spacing_top = -100
+extra_spacing_bottom = -100
+font_data = ExtResource( 1 )
+
+[node name="WordNode" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="WordButton" type="Button" parent="."]
+margin_left = 61.0
+margin_right = 435.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 19 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "xxx"
+clip_text = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeleteButton" type="Button" parent="."]
+margin_left = 1.0
+margin_right = 47.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 0.74902, 0.0862745, 0.0862745, 1 )
+custom_colors/font_color = Color( 0.74902, 0.0862745, 0.0862745, 1 )
+custom_colors/font_color_hover = Color( 0.74902, 0.0862745, 0.0862745, 1 )
+custom_colors/font_color_pressed = Color( 0.74902, 0.0862745, 0.0862745, 1 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddButton" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 46.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 20 )
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0.0588235, 0.2, 0.839216, 1 )
+custom_colors/font_color = Color( 0.0588235, 0.2, 0.839216, 1 )
+custom_colors/font_color_hover = Color( 0.0588235, 0.2, 0.839216, 1 )
+custom_colors/font_color_pressed = Color( 0.0588235, 0.2, 0.839216, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="WordButton" to="." method="_on_WordButton_pressed"]
+[connection signal="pressed" from="DeleteButton" to="." method="_on_DeleteButton_pressed"]
+[connection signal="pressed" from="AddButton" to="." method="_on_AddButton_pressed"]
