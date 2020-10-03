@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/PracticePage.gd" type="Script" id=1]
 [ext_resource path="res://styles/green.tres" type="StyleBox" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://fonts/font-large.tres" type="DynamicFont" id=4]
 [ext_resource path="res://scenes/KeyboardNode.tscn" type="PackedScene" id=5]
 [ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://img/check_green.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 10.0
@@ -34,6 +35,7 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 content_margin_left = 10.0
+bg_color = Color( 0.356863, 0.192157, 0.243137, 1 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 65
@@ -41,6 +43,10 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 75
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 25
 font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=12]
@@ -213,9 +219,9 @@ __meta__ = {
 }
 
 [node name="PeekBox" type="Button" parent="."]
-margin_left = 40.0
+margin_left = 41.0
 margin_top = 85.0
-margin_right = 465.0
+margin_right = 466.0
 margin_bottom = 165.0
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 5 )
@@ -239,17 +245,42 @@ margin_right = 693.0
 margin_bottom = 74.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "1/1"
+text = "1"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Hud1" type="Label" parent="."]
+margin_left = 824.0
+margin_right = 1024.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Correct:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hud2" type="Label" parent="."]
+margin_left = 824.0
+margin_top = 36.0
+margin_right = 1024.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Total:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PeekButton" type="Button" parent="."]
-margin_left = 477.0
+margin_left = 469.0
 margin_top = 85.0
-margin_right = 557.0
+margin_right = 549.0
 margin_bottom = 165.0
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 13 )
@@ -263,9 +294,9 @@ __meta__ = {
 }
 
 [node name="NextButton" type="Button" parent="."]
-margin_left = 870.0
+margin_left = 867.0
 margin_top = 85.0
-margin_right = 990.0
+margin_right = 1017.0
 margin_bottom = 165.0
 custom_styles/hover = SubResource( 20 )
 custom_styles/pressed = SubResource( 21 )
@@ -279,10 +310,10 @@ __meta__ = {
 }
 
 [node name="ShowButton" type="Button" parent="."]
-margin_left = 566.0
-margin_top = 84.0
-margin_right = 646.0
-margin_bottom = 164.0
+margin_left = 554.0
+margin_top = 85.0
+margin_right = 634.0
+margin_bottom = 165.0
 custom_styles/hover = SubResource( 22 )
 custom_styles/pressed = SubResource( 23 )
 custom_styles/focus = SubResource( 22 )
@@ -295,9 +326,9 @@ __meta__ = {
 }
 
 [node name="PrevButton" type="Button" parent="."]
-margin_left = 778.0
+margin_left = 779.0
 margin_top = 85.0
-margin_right = 858.0
+margin_right = 864.0
 margin_bottom = 165.0
 custom_styles/hover = SubResource( 24 )
 custom_styles/pressed = SubResource( 25 )
@@ -311,9 +342,9 @@ __meta__ = {
 }
 
 [node name="GuideButton" type="Button" parent="."]
-margin_left = 663.0
+margin_left = 639.0
 margin_top = 85.0
-margin_right = 763.0
+margin_right = 759.0
 margin_bottom = 165.0
 custom_styles/hover = SubResource( 26 )
 custom_styles/pressed = SubResource( 27 )
@@ -325,6 +356,11 @@ text = "guide"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Check" type="Sprite" parent="."]
+visible = false
+position = Vector2( 933, 233 )
+texture = ExtResource( 7 )
 
 [node name="Spaks" type="Node2D" parent="."]
 position = Vector2( 512, 230 )

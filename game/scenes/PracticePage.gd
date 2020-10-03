@@ -21,13 +21,12 @@ func _on_BackButton_pressed():
 
 
 func _on_KeyboardNode_key_tapped(key):
+	var current = Global.get_current()
+	var newText = "%s%s" % [$InputBox.text, key]
+	var subExpt = current.substr(0, newText.length())
+	if current == newText:
+		_spak_up()
 	if _guiding:
-		var current = Global.get_current()
-		var newText = "%s%s" % [$InputBox.text, key]
-		var subExpt = current.substr(0, newText.length())
-		if current == newText:
-			Input.vibrate_handheld()
-			_spak_up()
 		if newText == subExpt:
 			$InputBox.text += key
 			Global.set_current_input($InputBox.text)
@@ -37,6 +36,7 @@ func _on_KeyboardNode_key_tapped(key):
 		if $InputBox.text.length() < 22:
 			$InputBox.text += key
 			Global.set_current_input($InputBox.text)
+	_update_hud()
 
 
 func _on_PeekBox_pressed():
@@ -59,6 +59,7 @@ func _on_KeyboardNode_key_backspace():
 	if $InputBox.text.length() > 0:
 		$InputBox.text = $InputBox.text.substr(0, $InputBox.text.length() - 1)
 		Global.set_current_input($InputBox.text)
+	_update_hud()
 
 
 func _on_KeyboardNode_key_left():
@@ -72,8 +73,15 @@ func _on_KeyboardNode_key_right():
 func _update_hud():
 	if _showing:
 		$PeekBox.text = Global.get_current()
-	$Hud.text = "%d / %d" % [(Global.get_current_index()  + 1), Global.words_size()]
+	#$Hud.text = "%d / %d" % [(Global.get_current_index()  + 1), Global.words_size()]
+	$Hud.text = "%d" % [(Global.get_current_index()  + 1)]
+	$Hud1.text = "Correct: %d" % [Global.get_correct_count()]
+	$Hud2.text = "Total: %d" % [Global.words_size()]
 	$InputBox.text = Global.get_current_input()
+	if Global.get_current() == $InputBox.text:
+		$Check.visible = true
+	else:
+		$Check.visible = false
 
 
 func _on_PeekButton_pressed():
@@ -123,8 +131,8 @@ func _on_GuideButton_pressed():
 	else:
 		_guiding = true
 		$GuideButton.text = "no guide"
-		$InputBox.text = ""
-		Global.set_current_input($InputBox.text)
+		#$InputBox.text = ""
+		#Global.set_current_input($InputBox.text)
 
 
 
