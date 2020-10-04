@@ -1,12 +1,14 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/PracticePage.gd" type="Script" id=1]
-[ext_resource path="res://styles/green.tres" type="StyleBox" id=2]
 [ext_resource path="res://fonts/font-mid.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/font-large.tres" type="DynamicFont" id=4]
 [ext_resource path="res://scenes/KeyboardNode.tscn" type="PackedScene" id=5]
 [ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://img/check_green.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.733333, 0.898039, 0.807843, 1 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 10.0
@@ -35,7 +37,7 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 content_margin_left = 10.0
-bg_color = Color( 0.356863, 0.192157, 0.243137, 1 )
+bg_color = Color( 0.333333, 0.337255, 0.392157, 1 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 65
@@ -50,10 +52,10 @@ size = 25
 font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.152941, 0.376471, 0.0705882, 1 )
+bg_color = Color( 0.921569, 0.92549, 0.517647, 1 )
 
 [sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0.152941, 0.376471, 0.0705882, 1 )
+bg_color = Color( 0.921569, 0.92549, 0.517647, 1 )
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 4.0
@@ -63,63 +65,35 @@ expand_margin_bottom = 4.0
 bg_color = Color( 0.368627, 0.396078, 0.356863, 1 )
 
 [sub_resource type="DynamicFont" id=14]
-size = 33
+size = 44
 font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=20]
-bg_color = Color( 0, 0.411765, 0.121569, 1 )
+bg_color = Color( 0.666667, 1, 0.796078, 1 )
 
 [sub_resource type="StyleBoxFlat" id=21]
-bg_color = Color( 0, 0.411765, 0.121569, 1 )
+bg_color = Color( 0.666667, 1, 0.796078, 1 )
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 4.0
 expand_margin_bottom = 4.0
 
 [sub_resource type="DynamicFont" id=15]
-size = 33
-font_data = ExtResource( 6 )
-
-[sub_resource type="StyleBoxFlat" id=22]
-bg_color = Color( 0.588235, 0.109804, 0.603922, 1 )
-
-[sub_resource type="StyleBoxFlat" id=23]
-bg_color = Color( 0.588235, 0.109804, 0.603922, 1 )
-expand_margin_left = 4.0
-expand_margin_right = 4.0
-expand_margin_top = 4.0
-expand_margin_bottom = 4.0
-
-[sub_resource type="DynamicFont" id=16]
-size = 33
+size = 44
 font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=24]
-bg_color = Color( 0.372549, 0.4, 0.137255, 1 )
+bg_color = Color( 0.843137, 0.866667, 1, 1 )
 
 [sub_resource type="StyleBoxFlat" id=25]
-bg_color = Color( 0.372549, 0.4, 0.137255, 1 )
+bg_color = Color( 0.843137, 0.866667, 1, 1 )
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 4.0
 expand_margin_bottom = 4.0
 
 [sub_resource type="DynamicFont" id=17]
-size = 33
-font_data = ExtResource( 6 )
-
-[sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.231373, 0.231373, 0.619608, 1 )
-
-[sub_resource type="StyleBoxFlat" id=27]
-bg_color = Color( 0.231373, 0.231373, 0.619608, 1 )
-expand_margin_left = 4.0
-expand_margin_right = 4.0
-expand_margin_top = 4.0
-expand_margin_bottom = 4.0
-
-[sub_resource type="DynamicFont" id=18]
-size = 33
+size = 44
 font_data = ExtResource( 6 )
 
 [sub_resource type="CanvasItemMaterial" id=8]
@@ -164,7 +138,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 margin_right = 1024.0
 margin_bottom = 72.0
-custom_styles/normal = ExtResource( 2 )
+custom_styles/normal = SubResource( 29 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
@@ -220,9 +194,9 @@ __meta__ = {
 
 [node name="PeekBox" type="Button" parent="."]
 margin_left = 41.0
-margin_top = 85.0
-margin_right = 466.0
-margin_bottom = 165.0
+margin_top = 84.0
+margin_right = 601.0
+margin_bottom = 164.0
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 5 )
@@ -278,16 +252,20 @@ __meta__ = {
 }
 
 [node name="PeekButton" type="Button" parent="."]
-margin_left = 469.0
-margin_top = 85.0
-margin_right = 549.0
-margin_bottom = 165.0
+margin_left = 610.0
+margin_top = 84.0
+margin_right = 739.0
+margin_bottom = 164.0
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 13 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/disabled = SubResource( 19 )
 custom_styles/normal = SubResource( 12 )
 custom_fonts/font = SubResource( 14 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 text = "peek"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -296,7 +274,7 @@ __meta__ = {
 [node name="NextButton" type="Button" parent="."]
 margin_left = 867.0
 margin_top = 85.0
-margin_right = 1017.0
+margin_right = 1023.0
 margin_bottom = 165.0
 custom_styles/hover = SubResource( 20 )
 custom_styles/pressed = SubResource( 21 )
@@ -304,31 +282,19 @@ custom_styles/focus = SubResource( 20 )
 custom_styles/disabled = SubResource( 20 )
 custom_styles/normal = SubResource( 20 )
 custom_fonts/font = SubResource( 15 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 text = "next >"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ShowButton" type="Button" parent="."]
-margin_left = 554.0
-margin_top = 85.0
-margin_right = 634.0
-margin_bottom = 165.0
-custom_styles/hover = SubResource( 22 )
-custom_styles/pressed = SubResource( 23 )
-custom_styles/focus = SubResource( 22 )
-custom_styles/disabled = SubResource( 22 )
-custom_styles/normal = SubResource( 22 )
-custom_fonts/font = SubResource( 16 )
-text = "show"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="PrevButton" type="Button" parent="."]
-margin_left = 779.0
+margin_left = 756.0
 margin_top = 85.0
-margin_right = 864.0
+margin_right = 860.0
 margin_bottom = 165.0
 custom_styles/hover = SubResource( 24 )
 custom_styles/pressed = SubResource( 25 )
@@ -336,23 +302,11 @@ custom_styles/focus = SubResource( 24 )
 custom_styles/disabled = SubResource( 24 )
 custom_styles/normal = SubResource( 24 )
 custom_fonts/font = SubResource( 17 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 text = "< back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="GuideButton" type="Button" parent="."]
-margin_left = 639.0
-margin_top = 85.0
-margin_right = 759.0
-margin_bottom = 165.0
-custom_styles/hover = SubResource( 26 )
-custom_styles/pressed = SubResource( 27 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/disabled = SubResource( 26 )
-custom_styles/normal = SubResource( 26 )
-custom_fonts/font = SubResource( 18 )
-text = "guide"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -360,6 +314,11 @@ __meta__ = {
 [node name="Check" type="Sprite" parent="."]
 visible = false
 position = Vector2( 933, 233 )
+texture = ExtResource( 7 )
+
+[node name="Check2" type="Sprite" parent="."]
+position = Vector2( 790, 35 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 7 )
 
 [node name="Spaks" type="Node2D" parent="."]
@@ -386,7 +345,5 @@ wait_time = 0.4
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="PeekButton" to="." method="_on_PeekButton_pressed"]
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
-[connection signal="pressed" from="ShowButton" to="." method="_on_ShowButton_pressed"]
 [connection signal="pressed" from="PrevButton" to="." method="_on_PrevButton_pressed"]
-[connection signal="pressed" from="GuideButton" to="." method="_on_GuideButton_pressed"]
 [connection signal="timeout" from="Spaks/SpaksTimer" to="." method="_on_SpaksTimer_timeout"]

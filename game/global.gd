@@ -102,6 +102,13 @@ func get_correct_count():
 	return count
 
 
+func clear_expected():
+	var count := 0
+	for i in range(0, _word_set.words.size()):
+		_word_set.words[i].actual = ""
+	_current = 0
+	check_point()
+
 func dec_current():
 	if _current > 0:
 		_current -= 1
