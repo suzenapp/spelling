@@ -13,23 +13,23 @@
 [ext_resource path="res://img/check_green.png" type="Texture" id=11]
 [ext_resource path="res://img/reset.png" type="Texture" id=12]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 50
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 55
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 55
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 55
-font_data = ExtResource( 9 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 55
-font_data = ExtResource( 9 )
-
-[sub_resource type="DynamicFont" id=6]
 size = 50
 font_data = ExtResource( 9 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=5]
 size = 30
 font_data = ExtResource( 9 )
 
@@ -115,7 +115,7 @@ margin_left = 305.0
 margin_top = 486.0
 margin_right = 736.0
 margin_bottom = 547.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "All correct. Well done!"
 align = 1
@@ -165,7 +165,7 @@ margin_left = 710.0
 margin_top = 154.0
 margin_right = 908.0
 margin_bottom = 244.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.866667, 0.223529, 0.223529, 1 )
 text = "Yes, clear"
 flat = true
@@ -179,7 +179,7 @@ margin_left = 137.0
 margin_top = 156.0
 margin_right = 492.0
 margin_bottom = 246.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "No, leave it"
 flat = true
@@ -193,7 +193,7 @@ margin_left = 131.0
 margin_top = 17.0
 margin_right = 916.0
 margin_bottom = 92.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Do you want to clear all practice entries?"
 align = 1
@@ -207,7 +207,7 @@ margin_left = 132.0
 margin_top = 100.0
 margin_right = 916.0
 margin_bottom = 163.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "This will remove all the words entered in practice,
 but won't touch the Word List"
