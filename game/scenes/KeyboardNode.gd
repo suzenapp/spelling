@@ -40,14 +40,14 @@ func _on_Letter_key_tapped(key):
 	emit_signal("key_tapped", key)
 
 
-func _on_Backspace_key_tapped():
+func _on_Backspace_key_tapped(key):
 	emit_signal("key_backspace")
 
 
-func _on_LeftArrow_key_tapped():
+func _on_LeftArrow_key_tapped(key):
 	emit_signal("key_left")
 
 
-func _on_RightArrow_key_tapped():
+func _on_RightArrow_key_tapped(key):
 	emit_signal("key_right")
 
