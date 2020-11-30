@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/PTSans-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/WordNode.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=1]
@@ -11,7 +11,7 @@
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=19]
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="DynamicFont" id=6]
 resource_local_to_scene = true
@@ -44,7 +44,7 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxEmpty" id=16]
 
-[sub_resource type="StyleBoxEmpty" id=20]
+[sub_resource type="StyleBoxEmpty" id=17]
 
 [sub_resource type="DynamicFont" id=18]
 size = 80
@@ -63,7 +63,7 @@ custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 19 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -104,7 +104,7 @@ custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 14 )
 custom_styles/focus = SubResource( 15 )
 custom_styles/disabled = SubResource( 16 )
-custom_styles/normal = SubResource( 20 )
+custom_styles/normal = SubResource( 17 )
 custom_fonts/font = SubResource( 18 )
 custom_colors/font_color_disabled = Color( 0.0588235, 0.2, 0.839216, 1 )
 custom_colors/font_color = Color( 0.0588235, 0.2, 0.839216, 1 )

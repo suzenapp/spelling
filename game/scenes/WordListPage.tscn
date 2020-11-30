@@ -5,7 +5,7 @@
 [ext_resource path="res://fonts/font-large.tres" type="DynamicFont" id=3]
 [ext_resource path="res://scenes/WordListPage.gd" type="Script" id=4]
 [ext_resource path="res://scenes/KeyboardNode.tscn" type="PackedScene" id=5]
-[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://fonts/PTSans-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scenes/WordNode.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]

@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/WordListPage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://styles/green-pressed.tres" type="StyleBox" id=7]
 [ext_resource path="res://styles/green.tres" type="StyleBox" id=8]
-[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://fonts/PTSans-Regular.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://scenes/PracticePage.tscn" type="PackedScene" id=10]
 [ext_resource path="res://img/check_green.png" type="Texture" id=11]
 [ext_resource path="res://img/reset.png" type="Texture" id=12]
@@ -18,19 +18,19 @@ size = 50
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 55
+size = 45
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 55
+size = 45
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 50
+size = 39
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 30
+size = 25
 font_data = ExtResource( 9 )
 
 [node name="Main" type="Node2D"]
@@ -47,10 +47,10 @@ __meta__ = {
 [node name="MainPage" type="Node2D" parent="."]
 
 [node name="Title" type="Label" parent="MainPage"]
-margin_left = 317.59
-margin_top = 65.1893
-margin_right = 712.59
-margin_bottom = 215.189
+margin_left = 264.59
+margin_top = 57.1893
+margin_right = 792.59
+margin_bottom = 252.189
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Spelling"
@@ -125,8 +125,7 @@ __meta__ = {
 }
 
 [node name="Check" type="Sprite" parent="MainPage"]
-visible = false
-position = Vector2( 755, 515 )
+position = Vector2( 834, 515 )
 texture = ExtResource( 11 )
 
 [node name="ResetPractice" type="Button" parent="MainPage"]
@@ -161,10 +160,10 @@ __meta__ = {
 }
 
 [node name="ConfirmOk" type="Button" parent="ConfirmSlideDown"]
-margin_left = 710.0
-margin_top = 154.0
-margin_right = 908.0
-margin_bottom = 244.0
+margin_left = 691.0
+margin_top = 153.0
+margin_right = 911.0
+margin_bottom = 243.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.866667, 0.223529, 0.223529, 1 )
 text = "Yes, clear"
@@ -175,10 +174,10 @@ __meta__ = {
 }
 
 [node name="ConfirmCancel" type="Button" parent="ConfirmSlideDown"]
-margin_left = 137.0
-margin_top = 156.0
-margin_right = 492.0
-margin_bottom = 246.0
+margin_left = 135.0
+margin_top = 155.0
+margin_right = 490.0
+margin_bottom = 245.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "No, leave it"
@@ -189,10 +188,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="ConfirmSlideDown"]
-margin_left = 131.0
-margin_top = 17.0
-margin_right = 916.0
-margin_bottom = 92.0
+margin_left = 141.0
+margin_top = 9.0
+margin_right = 911.0
+margin_bottom = 84.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Do you want to clear all practice entries?"
@@ -204,9 +203,9 @@ __meta__ = {
 
 [node name="Label2" type="Label" parent="ConfirmSlideDown"]
 margin_left = 132.0
-margin_top = 100.0
+margin_top = 73.0
 margin_right = 916.0
-margin_bottom = 163.0
+margin_bottom = 156.0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "This will remove all the words entered in practice,

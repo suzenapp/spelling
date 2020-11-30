@@ -4,13 +4,13 @@
 [ext_resource path="res://fonts/font-mid.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/font-large.tres" type="DynamicFont" id=4]
 [ext_resource path="res://scenes/KeyboardNode.tscn" type="PackedScene" id=5]
-[ext_resource path="res://fonts/BernerBasisschrift1_mod.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://fonts/PTSans-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://img/check_green.png" type="Texture" id=7]
 
-[sub_resource type="StyleBoxFlat" id=29]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.733333, 0.898039, 0.807843, 1 )
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 content_margin_left = 10.0
 bg_color = Color( 1, 1, 1, 1 )
 border_width_left = 3
@@ -23,93 +23,93 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 65
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=4]
 content_margin_left = 10.0
 content_margin_top = 3.0
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 65
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=6]
 content_margin_left = 10.0
 bg_color = Color( 0.333333, 0.337255, 0.392157, 1 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
+size = 60
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
 size = 65
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=7]
-size = 75
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=28]
+[sub_resource type="DynamicFont" id=9]
 size = 25
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.921569, 0.92549, 0.517647, 1 )
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.921569, 0.92549, 0.517647, 1 )
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 4.0
 expand_margin_bottom = 4.0
 
-[sub_resource type="StyleBoxFlat" id=19]
+[sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.368627, 0.396078, 0.356863, 1 )
 
-[sub_resource type="DynamicFont" id=14]
-size = 44
+[sub_resource type="DynamicFont" id=13]
+size = 40
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=20]
+[sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0.666667, 1, 0.796078, 1 )
 
-[sub_resource type="StyleBoxFlat" id=21]
+[sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 0.666667, 1, 0.796078, 1 )
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 4.0
 expand_margin_bottom = 4.0
 
-[sub_resource type="DynamicFont" id=15]
-size = 44
+[sub_resource type="DynamicFont" id=16]
+size = 35
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=24]
+[sub_resource type="StyleBoxFlat" id=17]
 bg_color = Color( 0.843137, 0.866667, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=25]
+[sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 0.843137, 0.866667, 1, 1 )
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 expand_margin_top = 4.0
 expand_margin_bottom = 4.0
 
-[sub_resource type="DynamicFont" id=17]
-size = 44
+[sub_resource type="DynamicFont" id=19]
+size = 35
 font_data = ExtResource( 6 )
 
-[sub_resource type="CanvasItemMaterial" id=8]
+[sub_resource type="CanvasItemMaterial" id=20]
 particles_animation = true
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
-[sub_resource type="Gradient" id=9]
+[sub_resource type="Gradient" id=21]
 offsets = PoolRealArray( 0.0945122, 0.246951, 0.463415, 0.719512, 0.89939 )
 colors = PoolColorArray( 1, 0, 0.84375, 0.860421, 1, 0.0470588, 0, 0.635294, 0, 0.0625, 1, 0.581404, 0.129412, 0.85098, 0.25098, 0.517647, 0.92549, 1, 0, 0.486275 )
 
-[sub_resource type="GradientTexture" id=10]
-gradient = SubResource( 9 )
+[sub_resource type="GradientTexture" id=22]
+gradient = SubResource( 21 )
 
-[sub_resource type="ParticlesMaterial" id=11]
+[sub_resource type="ParticlesMaterial" id=23]
 lifetime_randomness = 0.22
 emission_shape = 2
 emission_box_extents = Vector3( 440, 50, 1 )
@@ -122,7 +122,7 @@ orbit_velocity_random = 0.0
 radial_accel = 26.78
 scale = 5.0
 scale_random = 0.26
-color_ramp = SubResource( 10 )
+color_ramp = SubResource( 22 )
 anim_speed = 5.6
 
 [node name="PracticePage" type="Node2D"]
@@ -138,7 +138,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 margin_right = 1024.0
 margin_bottom = 72.0
-custom_styles/normal = SubResource( 29 )
+custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
@@ -170,8 +170,8 @@ margin_left = 37.0
 margin_top = 182.0
 margin_right = 987.0
 margin_bottom = 285.0
-custom_styles/normal = SubResource( 1 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 valign = 1
 clip_text = true
@@ -184,8 +184,8 @@ margin_left = 37.0
 margin_top = 182.0
 margin_right = 987.0
 margin_bottom = 285.0
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.513726, 0.513726, 0.513726, 1 )
 valign = 1
 __meta__ = {
@@ -196,13 +196,13 @@ __meta__ = {
 margin_left = 41.0
 margin_top = 84.0
 margin_right = 601.0
-margin_bottom = 164.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
+margin_bottom = 163.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 clip_text = true
 align = 0
 __meta__ = {
@@ -216,8 +216,8 @@ wait_time = 0.4
 margin_left = 331.0
 margin_top = -1.0
 margin_right = 693.0
-margin_bottom = 74.0
-custom_fonts/font = SubResource( 7 )
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "1"
 align = 1
@@ -230,7 +230,7 @@ __meta__ = {
 margin_left = 824.0
 margin_right = 1024.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Correct:"
 valign = 1
@@ -243,7 +243,7 @@ margin_left = 824.0
 margin_top = 36.0
 margin_right = 1024.0
 margin_bottom = 72.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Total:"
 valign = 1
@@ -256,12 +256,12 @@ margin_left = 610.0
 margin_top = 84.0
 margin_right = 739.0
 margin_bottom = 164.0
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/focus = SubResource( 12 )
-custom_styles/disabled = SubResource( 19 )
-custom_styles/normal = SubResource( 12 )
-custom_fonts/font = SubResource( 14 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -276,12 +276,12 @@ margin_left = 867.0
 margin_top = 85.0
 margin_right = 1023.0
 margin_bottom = 165.0
-custom_styles/hover = SubResource( 20 )
-custom_styles/pressed = SubResource( 21 )
-custom_styles/focus = SubResource( 20 )
-custom_styles/disabled = SubResource( 20 )
-custom_styles/normal = SubResource( 20 )
-custom_fonts/font = SubResource( 15 )
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/disabled = SubResource( 14 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = SubResource( 16 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -296,12 +296,12 @@ margin_left = 756.0
 margin_top = 85.0
 margin_right = 860.0
 margin_bottom = 165.0
-custom_styles/hover = SubResource( 24 )
-custom_styles/pressed = SubResource( 25 )
-custom_styles/focus = SubResource( 24 )
-custom_styles/disabled = SubResource( 24 )
-custom_styles/normal = SubResource( 24 )
-custom_fonts/font = SubResource( 17 )
+custom_styles/hover = SubResource( 17 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/focus = SubResource( 17 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 17 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -329,10 +329,10 @@ __meta__ = {
 }
 
 [node name="Particles2D" type="Particles2D" parent="Spaks"]
-material = SubResource( 8 )
+material = SubResource( 20 )
 emitting = false
 amount = 750
-process_material = SubResource( 11 )
+process_material = SubResource( 23 )
 
 [node name="SpaksTimer" type="Timer" parent="Spaks"]
 wait_time = 0.4
