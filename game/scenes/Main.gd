@@ -2,8 +2,6 @@ extends Node2D
 
 onready var _page_tween := $PageTween
 onready var _practice_result := $MainPage/Results
-onready var _test_button := $MainPage/TestButton
-onready var _test_result := $MainPage/TestResultLabel 
 
 var _delay := 0.2
 var _confirming := false
