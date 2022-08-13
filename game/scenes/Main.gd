@@ -49,6 +49,18 @@ func _confirm_slide_up():
 		_page_tween.start()
 		_confirming = false
 
+func _about_slide_down():
+	if !_confirming:
+		_page_tween.interpolate_property($AboutSlideDown, "position:y", -900, 0, _delay, Tween.TRANS_QUAD, Tween.EASE_OUT)
+		_page_tween.start()
+		_confirming = true
+
+func _about_slide_up():
+	if _confirming:
+		_page_tween.interpolate_property($AboutSlideDown, "position:y", 0, -900, _delay, Tween.TRANS_QUAD, Tween.EASE_OUT)
+		_page_tween.start()
+		_confirming = false
+
 func _on_WordListButton_pressed():
 	_confirm_slide_up()
 	$WordListPage.do_layout()
@@ -85,3 +97,23 @@ func _on_ConfirmOk_pressed():
 func _on_ConfirmCancel_pressed():
 	_confirm_slide_up()
 	
+
+
+func _on_AboutLinkButton_pressed():
+	_about_slide_down()
+
+
+func _on_AboutClose_pressed():
+	_about_slide_up()
+
+
+func _on_SiteUrlButton_pressed():
+	pass # OS.shell_open("https://suzen.app/spelling")
+
+
+func _on_SiteUrlHelpButton_pressed():
+	OS.shell_open("https://suzen.app/spelling")
+
+
+func _on_GodotButton_pressed():
+	OS.shell_open("http://godotengine.org")

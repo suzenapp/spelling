@@ -336,6 +336,7 @@ process_material = SubResource( 23 )
 
 [node name="SpaksTimer" type="Timer" parent="Spaks"]
 wait_time = 0.4
+
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="key_backspace" from="KeyboardNode" to="." method="_on_KeyboardNode_key_backspace"]
 [connection signal="key_left" from="KeyboardNode" to="." method="_on_KeyboardNode_key_left"]

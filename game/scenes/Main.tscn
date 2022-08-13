@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://styles/blue.tres" type="StyleBox" id=1]
 [ext_resource path="res://styles/blue-pressed.tres" type="StyleBox" id=2]
@@ -12,6 +12,25 @@
 [ext_resource path="res://scenes/PracticePage.tscn" type="PackedScene" id=10]
 [ext_resource path="res://img/check_green.png" type="Texture" id=11]
 [ext_resource path="res://img/reset.png" type="Texture" id=12]
+[ext_resource path="res://icon.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.764706, 0.792157, 1, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 35
+font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -33,6 +52,13 @@ font_data = ExtResource( 9 )
 size = 25
 font_data = ExtResource( 9 )
 
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.207843, 0.333333, 0.439216, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 20
+font_data = ExtResource( 9 )
+
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -45,6 +71,47 @@ __meta__ = {
 }
 
 [node name="MainPage" type="Node2D" parent="."]
+
+[node name="AboutLinkButton" type="Button" parent="MainPage"]
+margin_left = 757.0
+margin_top = 25.0
+margin_right = 935.0
+margin_bottom = 90.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Help"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SiteUrlButton" type="Button" parent="MainPage"]
+margin_left = 223.491
+margin_top = 14.748
+margin_right = 399.491
+margin_bottom = 113.748
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 0.137255, 0.0941176, 0.835294, 1 )
+custom_colors/font_color = Color( 0.137255, 0.0941176, 0.835294, 1 )
+custom_colors/font_color_hover = Color( 0.137255, 0.0941176, 0.835294, 1 )
+custom_colors/font_color_pressed = Color( 0.137255, 0.0941176, 0.835294, 1 )
+text = "suzen.app"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Title" type="Label" parent="MainPage"]
 margin_left = 225.59
@@ -215,6 +282,148 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AboutSlideDown" type="Node2D" parent="."]
+position = Vector2( 0, -900 )
+
+[node name="ColorRect" type="ColorRect" parent="AboutSlideDown"]
+margin_left = 45.0
+margin_top = 1.0
+margin_right = 977.0
+margin_bottom = 563.0
+color = Color( 0.839216, 0.839216, 0.839216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutClose" type="Button" parent="AboutSlideDown"]
+margin_left = 737.0
+margin_top = 492.0
+margin_right = 958.0
+margin_bottom = 557.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Close"
+flat = true
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SiteUrlHelpButton" type="Button" parent="AboutSlideDown"]
+margin_left = 295.754
+margin_top = 392.218
+margin_right = 719.754
+margin_bottom = 457.218
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_disabled = Color( 0.137255, 0.0941176, 0.835294, 1 )
+custom_colors/font_color = Color( 0.137255, 0.0941176, 0.835294, 1 )
+custom_colors/font_color_hover = Color( 0.137255, 0.0941176, 0.835294, 1 )
+custom_colors/font_color_pressed = Color( 0.137255, 0.0941176, 0.835294, 1 )
+text = "https://suzen.app/spelling"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GodotButton" type="Button" parent="AboutSlideDown"]
+margin_left = 51.0
+margin_top = 489.0
+margin_right = 329.0
+margin_bottom = 559.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 10 )
+text = "Made with Godot Game Engine"
+icon = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutText" type="Label" parent="AboutSlideDown"]
+margin_left = 100.004
+margin_top = 6.26819
+margin_right = 874.004
+margin_bottom = 70.2682
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Spelling Homework is designed to help primary school students with their 
+English spelling homeworks as well as anyone who is looking practice spelling."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutText4" type="Label" parent="AboutSlideDown"]
+margin_left = 112.68
+margin_top = 452.487
+margin_right = 886.68
+margin_bottom = 479.487
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Spelling Homework  by suzen.app Open Source apps for everyone"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutText5" type="Label" parent="AboutSlideDown"]
+margin_left = 95.4324
+margin_top = 286.164
+margin_right = 869.432
+margin_bottom = 403.164
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Please contact us at https://suzen.app if you have any questions or suggestions.
+We are an open source company. All our products are free and we do not relie on
+advertisement. We thrive with our user contributions and encourge you to get involved by
+reporting issues, helping others or contributing to code."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutText2" type="Label" parent="AboutSlideDown"]
+margin_left = 95.684
+margin_top = 69.9044
+margin_right = 861.684
+margin_bottom = 204.904
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Word List screen is where you enter the list of words you want to practice. You must make
+sure words are spelled correctly here. We see this page to be mostly used by parents, say
+at the begining of a week, to set the words to be practiced for that weeks spelling
+homework."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutText3" type="Label" parent="AboutSlideDown"]
+margin_left = 93.7401
+margin_top = 189.401
+margin_right = 867.74
+margin_bottom = 280.401
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Practice screen is used by students ot gain experience of spelling the words in an easy
+to work with, guided environment. Students can complete the exercise several times,
+learning by repetition."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MainPage/AboutLinkButton" to="." method="_on_AboutLinkButton_pressed"]
+[connection signal="pressed" from="MainPage/SiteUrlButton" to="." method="_on_SiteUrlButton_pressed"]
 [connection signal="pressed" from="MainPage/WordListButton" to="." method="_on_WordListButton_pressed"]
 [connection signal="pressed" from="MainPage/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="MainPage/ResetPractice" to="." method="_on_ResetPractice_pressed"]
@@ -222,3 +431,6 @@ __meta__ = {
 [connection signal="back_button_pressed" from="PracticePage" to="." method="_on_PracticePage_back_button_pressed"]
 [connection signal="pressed" from="ConfirmSlideDown/ConfirmOk" to="." method="_on_ConfirmOk_pressed"]
 [connection signal="pressed" from="ConfirmSlideDown/ConfirmCancel" to="." method="_on_ConfirmCancel_pressed"]
+[connection signal="pressed" from="AboutSlideDown/AboutClose" to="." method="_on_AboutClose_pressed"]
+[connection signal="pressed" from="AboutSlideDown/SiteUrlHelpButton" to="." method="_on_SiteUrlHelpButton_pressed"]
+[connection signal="pressed" from="AboutSlideDown/GodotButton" to="." method="_on_GodotButton_pressed"]

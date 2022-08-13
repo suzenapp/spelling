@@ -100,15 +100,24 @@ func _hint_fields_off():
 
 
 func _on_PrevButton_pressed():
+	var current = Global.get_current_index()
+	if current == 0:
+		emit_signal("back_button_pressed")
 	Global.dec_current()
 	_update_hud()
 	_on_PeekButton_pressed()
 
 
 func _on_NextButton_pressed():
-	Global.inc_current()
-	_update_hud()
-	_on_PeekButton_pressed()
+	var current = Global.get_current_index()
+	var total = Global.words_size()
+	var correct = Global.get_correct_count()
+	if correct == total and current == total - 1:
+		emit_signal("back_button_pressed")
+	else:
+		Global.inc_current()
+		_update_hud()
+		_on_PeekButton_pressed()
 
 
 func _spak_up():
